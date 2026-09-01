@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <title>Портфолио копирайтера — Анастасия Чеботарёва</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 0.75rem 0 0;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeInUp 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .hero .author {
+      text-align: right;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin: 0.65rem 0 0.3rem;
+      color: var(--text);
+    }
+
+    /* Sections */
+    .section {
+      padding: 0.65rem 0;
+    }
+
+    .section-heading {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+
+    .subsection-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0.85rem 0 0.3rem;
+      color: var(--text);
+    }
+
+    /* Callout cards */
+    .callout {
+      border-left: 3px solid var(--border-accent);
+      background: var(--surface);
+      padding: 0.6rem 1rem;
+      border-radius: 0 4px 4px 0;
+      margin: 0.4rem 0 0.5rem;
+      transition: background-color 0.3s ease;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    /* Lists */
+    .section ul {
+      margin: 0.2rem 0 0.35rem;
+    }
+
+    .section ul li {
+      padding-left: 1.25rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.45;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      html {
+        font-size: 14px;
+      }
+
+      .container {
+        padding: 1rem 1rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .callout {
+        padding: 0.5rem 0.85rem;
+      }
+
+      .section-heading {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--link);
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--link);
+    }
+
+    /* Contact footer */
+    .contact-card {
+      border-left: 3px solid var(--border-accent);
+      background: var(--surface);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-card h2 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .contact-card a {
+      color: var(--link);
+      font-weight: 600;
+    }
+
+    .contact-card .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+
+      .section-heading {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="hero">
+      <h1>_портфолио копирайтера</h1>
+      <p class="author">Анастасия Чеботарёва</p>
+    </header>
+
+    <main>
+
+      <section class="section">
+        <h2 class="section-heading">_лайфстайл, HoReCa / для частных заказчиков</h2>
+        <ul>
+          <li><a href="https://orbita.bar/" target="_blank" rel="noopener">https://orbita.bar/</a> тексты для лендинга бара Орбита, подготовлены по заказу коммуникационного агентства</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">_маркетинг и IT / для компании <a href="https://edna.io/" target="_blank" rel="noopener">edna</a></h2>
+        <div class="callout">🤝 Маркетинговые тексты b2b / с пользой для компании и клиента</div>
+        <ul>
+          <li><a href="https://vc.ru/u/1353542-edna/862650-ne-mogu-govorit-pokupayu-bitkoiny-kak-skillbox-obrabatyvaet-zayavki-na-obuchenie-s-pomoshyu-whatsapp" target="_blank" rel="noopener">«Не могу говорить — покупаю биткоины»: как Skillbox обрабатывает заявки на обучение с помощью WhatsApp</a> / <strong>Клиентский кейс</strong></li>
+          <li><a href="https://edna.ru/news/ii-dlya-marketologov-kak-sostavlyat-prompty-dlya-nejroseti-chtoby-delat-effektivnye-rassylki/" target="_blank" rel="noopener">ИИ для маркетологов: как составлять промпты для нейросети, чтобы делать эффективные рассылки</a> / <strong>Продуктовая статья</strong></li>
+          <li><a href="https://edna.ru/news/god-zelenogo-messendzhera-podvodim-itogi-s-whatsapp-business-api/" target="_blank" rel="noopener">Год зеленого мессенджера: подводим итоги с WhatsApp Business API</a> / <strong>Продуктовая статья</strong></li>
+          <li><a href="https://edna.ru/news/modul-templates-sms/" target="_blank" rel="noopener">Компания edna запустила модуль Templates: регистрация шаблонов SMS стала быстрее и удобнее</a>/ <strong>Пресс-релиз</strong></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">_современное искусство</h2>
+
+        <h3 class="subsection-heading">/ для студии художницы Таус Махачевой</h3>
+        <div class="callout">🧶 Тексты для заявок на гранты и фестивали, анонсы, пресс-релизы, презентации и коммерческие предложения</div>
+        <ul>
+          <li><a href="https://www.giorgiopersano.org/en/mostra/35857/" target="_blank" rel="noopener">TAUS MAKHACHEVA | Seeing, Touching, Imbibing</a> / Пресс-релиз к выставке в галерее Персано, Турин. Подготовлен совместно с Таус Махачевой и Рут Эдисон</li>
+          <li><a href="https://www.artissima.art/en/open/the-work-behind-the-work-francesco-manacorda-in-conversation-with-taus-makhacheva/" target="_blank" rel="noopener">The Work Behind the Work: Francesco Manacorda in Conversation with Taus Makhacheva</a> / Анонс артист-тока на ярмарке современного искусства Artissima, подготовлен совместно с Таус Махачевой</li>
+        </ul>
+
+        <h3 class="subsection-heading">/ для сайта музея «Гараж», платформы <a href="https://garage.digital/" target="_blank" rel="noopener">garage.digital</a> и др.</h3>
+        <div class="callout">🏛 Информационные тексты для посетителей музея и аудитории музейных сайтов</div>
+        <ul>
+          <li><a href="https://garagemca.org/exhibition/iam/materials/garage-nikonole-garage-x-helena-nikonole" target="_blank" rel="noopener">Garage x Николоне</a> / <strong>Описание проекта</strong></li>
+          <li><a href="https://garagemca.org/event/iam-screening" target="_blank" rel="noopener">IAM. Screening</a> / <strong>Описание кинопрограммы</strong></li>
+          <li><a href="https://garage.digital/ru/events/performance-by-lu-yang-performans-lu-yana" target="_blank" rel="noopener">Перформанс Лу Яна</a> / <strong>Описание проекта</strong></li>
+          <li><a href="https://garage.digital/ru/projects/those-who-2019" target="_blank" rel="noopener">Те, кто</a> / <strong>Описание проекта</strong></li>
+          <li><a href="https://garage.digital/ru/projects/foood-2050-2014-2019" target="_blank" rel="noopener">Food 2050</a> / <strong>Описание проекта</strong></li>
+        </ul>
+
+        <div class="callout">🧶 Лонгриды и короткие статьи по современному искусству</div>
+        <ul>
+          <li>Выход из цифрового тупика // Диалог искусств №4, 2021</li>
+          <li><a href="https://www.buro247.ru/culture/arts/digital-art-chto-proiskhodit-s-tcifrovym-iskusstvo.html" target="_blank" rel="noopener">Digital Art: что происходит с цифровым искусством вообще и в Инстаграме в частности</a> // <strong>Buro 24/7</strong></li>
+          <li><a href="https://behipo.com/articles/tekhnologii-budushego-v-optike-sovremennykh-khudozhnikov#" target="_blank" rel="noopener">Технологии будущего в оптике современных художников</a> // <strong>Behipo</strong></li>
+          <li><a href="https://www.elle.ru/stil-zhizni/realnaya-virtualnost-i-rabota-xerces-blau-dzheimsa-ferraro-i-ezry-millera-id6866494/" target="_blank" rel="noopener">Новая реальность: виртуальный проект Джеймса Ферраро и Эзры Миллера</a> // <strong>Elle</strong></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="contact-card section">
+        <h2>💌 Связаться со мной</h2>
+        <div class="contact-list">
+          <span><a href="mailto:an.chebotareva@gmail.com">an.chebotareva@gmail.com</a></span>
+          <span><a href="https://t.me/nastyacheb" target="_blank" rel="noopener">tg @nastyacheb</a></span>
+        </div>
+      </div>
+      <a href="../" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        На главную
+      </a>
+    </footer>
+
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>

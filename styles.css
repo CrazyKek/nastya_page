@@ -1,0 +1,116 @@
+/* ─── Design tokens ─── */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f6f3;
+  --accent: #a07553;
+  --text: #37352f;
+  --muted: #787774;
+  --border-accent: #c8956c;
+  --link: #a07553;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #191919;
+    --surface: #262626;
+    --accent: #c8956c;
+    --text: #e8e8e8;
+    --muted: #999999;
+    --border-accent: #c8956c;
+    --link: #c8956c;
+  }
+}
+
+/* ─── Reset ─── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─── Base ─── */
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Container ─── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+/* ─── Links ─── */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* ─── Lists ─── */
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  position: relative;
+}
+
+.section ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--text);
+}
+
+.section ul li strong {
+  font-weight: 600;
+}
+
+/* ─── Section animation ─── */
+.section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Keyframes ─── */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}

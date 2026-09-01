@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <title>Настя Чеботарёва — Open to projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 1.5rem 0 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+    }
+
+    /* Aside cards with left border */
+    .aside-card {
+      border-left: 3px solid var(--border-accent);
+      background: var(--surface);
+      padding: 1.75rem 2rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .aside-card p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .aside-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .aside-card .greeting {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .aside-card .question {
+      font-weight: 600;
+      margin: 1.25rem 0 1rem;
+    }
+
+    .aside-card .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Sections */
+    .section {
+      padding: 2rem 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .section-heading {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .tags-line {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .section ul {
+      margin-bottom: 1.25rem;
+    }
+
+    .section ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .portfolio-link:hover {
+      border-bottom-color: var(--link);
+    }
+
+    /* Contact footer */
+    .contact-card {
+      border-left: 3px solid var(--border-accent);
+      background: var(--surface);
+      padding: 1.75rem 2rem;
+      border-radius: 0 4px 4px 0;
+      margin: 2rem 0 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-card h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .contact-card a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-card a:hover {
+      border-bottom-color: var(--link);
+    }
+
+    .contact-card .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    /* Initial load animation */
+    .hero,
+    .intro-card {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeInUp 0.7s ease forwards;
+    }
+
+    .intro-card {
+      animation-delay: 0.15s;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1.25rem 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .aside-card,
+      .contact-card {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .section-heading {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .section-heading {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="hero">
+      <h1>Open to <em>projects</em></h1>
+    </header>
+
+    <aside class="aside-card intro-card">
+      <p class="greeting">👋 Привет! Я Настя, и это моя визитка для поиска новых проектов.</p>
+      <p class="question">Кто я и что умею?</p>
+      <p>Последние годы на hh.ru у меня минимум пять разных резюме: искусствовед, куратор, продюсер, копирайтер, редактор, контент-менеджер. Если соединить все места работы в одно CV, получается странный путь: продюсер и куратор в музее современного искусства и галереях, копирайтер в ИТ-компании, руководитель студии художницы и ассистент научных проектов по психологии на фрилансе. А недавно добавилась ещё и идентичность танцовщицы.</p>
+      <p>Это не СДВГ и не сплит, просто жизнь собирала эту коллекцию по-своему, а я иногда помогала. Зато теперь я быстро вхожу в новый контекст и понимаю очень разных людей — программиста и художника, хореографа и куратора, бизнесмена и топ-менеджера.</p>
+      <p>Чаще всего я нужна там, где одной узкой специальности мало: на стыке искусства, бизнеса и технологий, где важно одновременно понимать контекст, держать процесс и находить точные слова. Если у вас как раз такой проект или вы пока сами не уверены, чей это профиль, — пишите. Скорее всего, это ко мне.</p>
+      <p class="note">Ниже — подробнее о направлениях, в которых я могу быть полезна ⬇️</p>
+    </aside>
+
+    <main>
+
+      <section class="section">
+        <h2 class="section-heading">Продюсер</h2>
+        <p class="tags-line">Современное искусство | Выставки | Ивенты | Онлайн-проекты | Производство объектов искусства и дизайна</p>
+        <p class="section-subtitle">Чем я могу помочь?</p>
+        <ul>
+          <li>Собрать визуальные референсы и текстовые источники для выставки, ивента, съемки или создания объекта</li>
+          <li>Составить презентацию, мудборд, питч-дек</li>
+          <li>Составить бюджет и таймлайн проекта</li>
+          <li>Вести бюджет и считать экономику</li>
+          <li>Найти и скоординировать подрядчиков</li>
+          <li>Организовать и проконтролировать монтаж</li>
+          <li>Организовать производство любого художественного или дизайнерского объекта</li>
+          <li>Собрать материалы для заявки на грант или фестиваль</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">Копирайтер | Редактор</h2>
+        <p class="tags-line">Маркетинг | IT | Психология | Лайфстайл | Искусство и культура</p>
+        <p class="section-subtitle">Какие тексты я пишу и редактирую?</p>
+        <ul>
+          <li><strong>Маркетинговые:</strong> рассылки, кейсы, презентации, пресс-релизы, рекламные интеграции, экспертные статьи (по фактуре эксперта). Работаю по ТЗ или в связке с маркетологами и бизнес-заказчиками.</li>
+          <li><strong>Выставочные:</strong> воллтексты, этикетки, каталожные описания, анонсы и пресс-релизы, коммуникативные форматы. Помогу с редактурой или напишу с нуля.</li>
+          <li><strong>Шорт- и лонгриды по современному искусству:</strong> полностью погружусь в тему, найду источники, сделаю ресерч и напишу текст под ключ.</li>
+          <li><strong>Научные:</strong> помогу экспертам разных областей оформить массив информации в связный читаемый текст.</li>
+        </ul>
+        <a class="portfolio-link" href="./portfolio/">Примеры моих текстов →</a>
+      </section>
+
+      <section class="section">
+        <h2 class="section-heading">Танцы</h2>
+        <p class="tags-line">High Heels | Классы | Конвенции | Творческие проекты</p>
+        <p class="section-subtitle">Чем я могу помочь?</p>
+        <p>Два года я в танцевальной среде — хожу на классы и конвенции, танцую в творческой группе. Понимаю культуру изнутри и хочу помогать ей развиваться с теми же профессиональными инструментами, что и в других областях:</p>
+        <ul>
+          <li>Написать тексты для студии или преподавателя: описания классов, анонсы, рассылки</li>
+          <li>Помочь с организацией ивента или конвенции: бюджет, таймлайн, координация подрядчиков</li>
+          <li>Составить презентацию или питч для творческого проекта</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="contact-card section">
+        <h2>💌 Связаться со мной</h2>
+        <div class="contact-list">
+          <span><a href="mailto:an.chebotareva@gmail.com">an.chebotareva@gmail.com</a></span>
+          <span><a href="https://t.me/nastyacheb" target="_blank" rel="noopener">tg @nastyacheb</a></span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
